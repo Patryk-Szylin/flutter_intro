@@ -59,6 +59,7 @@ class Intro extends InheritedWidget {
     this.buttonTextBuilder,
     required Widget child,
   }) : super(child: child) {
+    print("tst");
     _animationDuration =
         noAnimation ? Duration(milliseconds: 0) : Duration(milliseconds: 300);
   }
@@ -241,7 +242,7 @@ class Intro extends InheritedWidget {
                 ),
               ),
             ),
-            width: position.width,
+            width: introStepBuilder.overlayWidth ?? position.width,
             left: position.left,
             top: position.top,
             bottom: position.bottom,

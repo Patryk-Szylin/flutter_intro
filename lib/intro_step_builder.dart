@@ -28,6 +28,8 @@ class IntroStepBuilder extends StatefulWidget {
   /// When widget loaded (means the key is add to context)
   final VoidCallback? onWidgetLoad;
 
+  final double? overlayWidth;
+
   IntroStepBuilder({
     Key? key,
     required this.order,
@@ -38,6 +40,7 @@ class IntroStepBuilder extends StatefulWidget {
     this.onHighlightWidgetTap,
     this.padding,
     this.onWidgetLoad,
+    this.overlayWidth,
   })  : assert(text != null || overlayBuilder != null),
         super(key: key);
 
